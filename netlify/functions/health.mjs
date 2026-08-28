@@ -1,0 +1,1 @@
+export default async () => new Response(JSON.stringify({ok:true,service:'ai-radar',timestamp:new Date().toISOString(),ai:!!process.env.ANTHROPIC_API_KEY,database:!!process.env.SUPABASE_URL}),{headers:{'content-type':'application/json'}});

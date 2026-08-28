@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Radar — Find the right AI tool</title>
+  <meta name="description" content="منصة اكتشاف وبحث أدوات الذكاء الاصطناعي. اوصف ما تريده وسيجد لك الأداة المناسبة." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['IBM Plex Sans Arabic', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; }
+    .skeleton { background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; }
+    .dark .skeleton { background: linear-gradient(90deg, #1f2937 25%, #374151 50%, #1f2937 75%); background-size: 200% 100%; }
+    @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+    .match-high { background: linear-gradient(135deg, #10b981, #059669); }
+    .match-mid { background: linear-gradient(135deg, #f59e0b, #d97706); }
+    .match-low { background: linear-gradient(135deg, #6b7280, #4b5563); }
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 min-h-screen transition-colors">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" onclick="showPage('home')" class="flex items-center gap-2 font-bold text-xl text-brand-600 dark:text-brand-400">
+          <span class="text-2xl">📡</span>
+          <span>AI Radar</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="#" onclick="showPage('home')" class="hover:text-brand-600">الرئيسية</a>
+          <a href="#" onclick="showPage('discover')" class="hover:text-brand-600">اكتشف</a>
+          <a href="#" onclick="showPage('compare')" class="hover:text-brand-600">مقارنة</a>
+          <a href="#" onclick="showPage('admin')" class="hover:text-brand-600">Admin</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button onclick="toggleTheme()" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800" title="تبديل الوضع">
+            <span id="theme-icon">🌙</span>
+          </button>
+          <button onclick="toggleLang()" class="px-3 py-1 text-sm rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">
+            <span id="lang-btn">EN</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="app" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Pages will be injected here -->
+  </main>
+
+  <footer class="border-t border-gray-200 dark:border-gray-800 mt-16 py-8 text-center text-sm text-gray-500">
+    <p>AI Radar — Find the right AI tool for what you want to do.</p>
+    <p class="mt-1">MVP • Real data only • No fabricated ratings or prices</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

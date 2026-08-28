@@ -1,0 +1,9 @@
+{
+  "name": "ai-radar",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {"dev": "netlify dev", "serve": "netlify dev", "seed": "node scripts/seed-supabase.mjs"},
+  "engines": {"node": ">=18"},
+  "devDependencies": {"netlify-cli": "latest"}
+}
